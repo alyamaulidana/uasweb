@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Siswa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Data Siswa</h1>
+      <p>Daftar hadir SMK Cibaduyut - Cibaduyut Periode 2024-2025</p>
+    </header>
+
+    <div class="input">
+      <input type="text" id="noabsen" placeholder="No.Absen" />
+      <input type="text" id="nama" placeholder="Nama Lengkap" />
+      
+      <select id="jurusan">
+        <option value="" disabled selected hidden>Jurusan</option>
+        <option value="Akutansi Keuangan">Akutansi Keuangan</option>
+        <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
+        <option value="Desain Komukasi Visual">Desain Komukasi Visual</option>
+      </select>
+
+      <input type="date" id="tanggal" placeholder="Tanggal" />
+
+      <!-- Keterangan Hadir (Hadir, Sakit, Izin) -->
+      <select id="keterangan">
+        <option value="" disabled selected hidden>Keterangan Hadir</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Sakit">Sakit</option>
+        <option value="Izin">Izin</option>
+      </select>
+
+      <button id="btnSimpan" onclick="simpanData()">Simpan</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No.Absen</th>
+          <th>Nama Lengkap</th>
+          <th>Jurusan</th>
+          <th>Tanggal</th>
+          <th>Keterangan Hadir</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="hasil">
+
+      </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="alert/sweetalert2.all.min.js"></script>
+  </body>
+</html>
